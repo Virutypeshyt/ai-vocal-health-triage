@@ -18,8 +18,8 @@ public class Main {
     System.out.println("\n--- Diagnosis ---");
 
 Rule[] rules = {
-    new Rule("yes", "yes", "Infection"),        // cough + fever
-    new Rule("yes", "yes", "Vocal Strain")      // hoarseness + cough
+    new Rule("yes", "yes", "Infection"),        
+    new Rule("yes", "yes", "Vocal Strain")      
 };
 
 boolean found = false;
