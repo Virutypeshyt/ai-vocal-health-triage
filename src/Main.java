@@ -15,24 +15,30 @@ public class Main {
         System.out.print("Do you have fever? (yes/no): ");
         String fever = sc.nextLine().toLowerCase();
 
-    System.out.println("\n--- Diagnosis ---");
+        System.out.println("\n--- Diagnosis ---");
 
 Rule[] rules = {
-    new Rule("yes", "yes", "Infection"),        
-    new Rule("yes", "yes", "Vocal Strain")      
+    new Rule("yes", "yes", "Infection"),
+    new Rule("yes", "yes", "Vocal Strain")
 };
 
 boolean found = false;
 
-if (rules[0].matches(cough, fever)) {
-    System.out.println("Possible Condition: " + rules[0].result);
-    System.out.println("Reason: cough + fever");
-    found = true;
-}
-else if (rules[1].matches(hoarseness, cough)) {
-    System.out.println("Possible Condition: " + rules[1].result);
-    System.out.println("Reason: hoarseness + cough");
-    found = true;
+for (Rule r : rules) {
+
+    if (r.result.equals("Infection") && r.matches(cough, fever)) {
+        System.out.println("Possible Condition: " + r.result);
+        System.out.println("Reason: cough + fever");
+        found = true;
+        break;
+    }
+
+    if (r.result.equals("Vocal Strain") && r.matches(hoarseness, cough)) {
+        System.out.println("Possible Condition: " + r.result);
+        System.out.println("Reason: hoarseness + cough");
+        found = true;
+        break;
+    }
 }
 
 if (!found) {
