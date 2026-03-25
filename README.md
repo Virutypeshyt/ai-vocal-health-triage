@@ -1,50 +1,75 @@
-# ai-vocal-health-triage
-AI-based vocal health expert system# AI-Based Vocal Biomarker Health Triage
+# 🎤 AI-Based Vocal Biomarker Health Triage
 
-## Overview
+## 📌 Overview
 
-This project implements a rule-based expert system to analyze vocal health symptoms and provide a preliminary diagnosis using classical AI techniques.
+This project implements a **rule-based expert system** to analyze vocal health symptoms and provide a preliminary diagnosis using **classical AI techniques** (no machine learning).
 
-## AI Concepts Used
+---
 
-* Expert System
-* Knowledge Representation
-* Propositional Logic
-* Predicate Logic
-* Inference Engine (Forward Chaining)
+## 🧠 AI Concepts Used
 
-## Features
+* 🤖 Expert System
+* 📚 Knowledge Representation
+* 🧩 Propositional Logic
+* 🧠 Predicate Logic
+* 🔄 Inference Engine (Forward Chaining)
 
-* Takes user input for symptoms such as hoarseness, cough, and fever
-* Applies rule-based reasoning
-* Provides diagnosis along with explanation
+---
 
-## System Architecture
+## ⚙️ Features
 
+* 🎤 Takes user input for symptoms (hoarseness, cough, fever)
+* 🧠 Applies rule-based reasoning
+* 📊 Provides diagnosis with explanation
+* ⚡ Fast and simple decision-making
+
+---
+
+## 🏗️ System Architecture
+
+```
 User Input → Fact Base → Inference Engine → Knowledge Base → Output
+```
 
-## Sample Rules
+---
 
-* IF cough AND fever → Infection
-* IF hoarseness AND cough → Vocal Strain
+## 📜 Sample Rules
 
-## Tech Stack
+* 🧩 IF cough AND fever → Infection
+* 🎤 IF hoarseness AND cough → Vocal Strain
 
-* Java
-* Object-Oriented Programming
+---
 
-## How to Run
+## 💻 Tech Stack
 
-1. Clone the repository
-2. Compile the Java files
-3. Run Main.java
+* ☕ Java
+* 🧱 Object-Oriented Programming
 
-## Sample Output
+---
 
-Possible Condition: Infection
-Reason: cough + fever
+## 🚀 How to Run
 
-## License
+1. 📥 Clone the repository
+2. ⚙️ Compile the Java files
+3. ▶️ Run Main.java
 
-MIT License
+---
 
+## 📊 Sample Output
+
+```
+Possible Condition: Infection  
+Reason: cough + fever  
+```
+
+---
+
+## 🎯 Project Goal
+
+To demonstrate how **AI can simulate human expert decision-making** using rule-based logic instead of machine learning.
+
+---
+
+## 📄 License
+
+📝 MIT License
