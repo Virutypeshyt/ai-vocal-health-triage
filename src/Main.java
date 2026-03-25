@@ -7,18 +7,23 @@ public class Main {
         System.out.println("=== Vocal Health Check ===");
 
         System.out.print("Do you have hoarseness? (yes/no): ");
-        String hoarseness = sc.nextLine();
+        String hoarseness = sc.nextLine().toLowerCase();
 
         System.out.print("Do you have cough? (yes/no): ");
-        String cough = sc.nextLine();
+        String cough = sc.nextLine().toLowerCase();
 
         System.out.print("Do you have fever? (yes/no): ");
-        String fever = sc.nextLine();
+        String fever = sc.nextLine().toLowerCase();
 
-        System.out.println("\nInput received:");
-        System.out.println("Hoarseness: " + hoarseness);
-        System.out.println("Cough: " + cough);
-        System.out.println("Fever: " + fever);
+        System.out.println("\n--- Diagnosis ---");
+
+        
+        if (cough.equals("yes") && fever.equals("yes")) {
+            System.out.println("Possible Condition: Infection");
+            System.out.println("Reason: cough + fever detected");
+        } else {
+            System.out.println("No major condition detected");
+        }
 
         sc.close();
     }
