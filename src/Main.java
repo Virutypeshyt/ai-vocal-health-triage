@@ -15,21 +15,26 @@ public class Main {
         System.out.print("Do you have fever? (yes/no): ");
         String fever = sc.nextLine().toLowerCase();
 
-System.out.println("\n--- Diagnosis ---");
+    System.out.println("\n--- Diagnosis ---");
 
+Rule[] rules = {
+    new Rule("yes", "yes", "Infection"),        // cough + fever
+    new Rule("yes", "yes", "Vocal Strain")      // hoarseness + cough
+};
 
-if (cough.equals("yes") && fever.equals("yes")) {
-    System.out.println("Possible Condition: Infection");
-    System.out.println("Reason: cough + fever detected");
+boolean found = false;
+
+if (rules[0].matches(cough, fever)) {
+    System.out.println("Possible Condition: " + rules[0].result);
+    System.out.println("Reason: cough + fever");
+    found = true;
 }
-else if (hoarseness.equals("yes") && cough.equals("yes")) {
-    System.out.println("Possible Condition: Vocal Strain");
-    System.out.println("Reason: hoarseness + cough detected");
+else if (rules[1].matches(hoarseness, cough)) {
+    System.out.println("Possible Condition: " + rules[1].result);
+    System.out.println("Reason: hoarseness + cough");
+    found = true;
 }
-else if (hoarseness.equals("yes")) {
-    System.out.println("Possible Condition: Mild Voice Issue");
-    System.out.println("Reason: hoarseness detected");
-}
-else {
+
+if (!found) {
     System.out.println("No major condition detected");
 }
